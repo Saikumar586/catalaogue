@@ -35,6 +35,7 @@ pipeline{
         
         {
             steps{
+                sh 'cd catalogue'
                 sh 'ls -lntp'
                 sh 'sonar-scanner'
             
