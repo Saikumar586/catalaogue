@@ -1,11 +1,11 @@
 pipeline{
 
-    agent{ node {lable 'AGENT-1'}}
+    agent{ node {label 'AGENT-1'}}
     
 
-    option{
+    options{
 
-        timeout(time:1,unit:'HOURS')
+        timeout(time:1, unit:'HOURS')
 
     }
     environment {
