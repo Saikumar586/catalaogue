@@ -35,8 +35,8 @@ pipeline{
         
         {
             steps{
-                sh ' cd H:/devopstools/repos/catalogue/sonar-scanner.properties'
-                sh 'ls -lntp'
+                //sh ' cd sonar-scanner.properties'
+                sh 'ls -ltr'
                 sh 'sonar-scanner'
             
             }
