@@ -31,13 +31,15 @@ pipeline{
 
         }
 
-        stage('sonarscanner')
+        stage('sonar scanner')
         
         {
             steps{
-                sh 'ls -ltr'
+                sh 'ls -lntp'
                 sh 'sonar-scanner'
+            
             }
+
 
         }
         
