@@ -35,7 +35,7 @@ pipeline{
         
         {
             steps{
-
+                sh 'ls -ltr'
                 sh 'sonar-scanner'
             }
 
