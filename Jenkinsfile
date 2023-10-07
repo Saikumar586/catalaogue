@@ -30,6 +30,17 @@ pipeline{
             }
 
         }
+
+        stage('sonarscanner')
+        
+        {
+            steps{
+
+                sh 'sonar-scanner'
+            }
+
+        }
+        
         
 //         stage(deploye)
 //             when{
