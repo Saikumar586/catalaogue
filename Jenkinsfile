@@ -35,7 +35,7 @@ pipeline{
         
         {
             steps{
-                sh 'cd catalogue'
+                sh 'H:\devopstools\repos\catalogue\sonar-scanner.properties'
                 sh 'ls -lntp'
                 sh 'sonar-scanner'
             
