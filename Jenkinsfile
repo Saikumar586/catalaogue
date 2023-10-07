@@ -17,11 +17,8 @@ pipeline{
             stage('install dependencies'){
 
                 steps {
-                    sh'''
-                       install npm
-                       echo " installed node js" 
-
-                    '''
+                    sh 'npm install'
+                    
                 }
             }
         stage('test')
