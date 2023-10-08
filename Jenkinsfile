@@ -58,7 +58,7 @@ pipeline{
 
                 sh'''
                         ls -ltr
-                        zip -r ./* --exclude=.git --exclude=.zip
+                        zip -r catalogue.zip ./* --exclude=.git --exclude=.zip
                 '''
             }
 
