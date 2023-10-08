@@ -70,7 +70,7 @@ pipeline{
                 nexusArtifactUploader(
                 nexusVersion: 'nexus3',
                 protocol: 'http',
-                nexusUrl: '54.226.247.229:8081',
+                nexusUrl: '54.226.247.229:8081/',
                 groupId: 'com.roboshop',
                 version: version,
                 repository: 'catalogue',
@@ -101,18 +101,18 @@ pipeline{
         
 //         }
 
-    post{
+    // post{
 
-        always{
-            success{
-                echo "deployement success"
-            }
-            failure{
-                echo "if deployement failed"
-            }
-        }
+    //     always{
+    //         success{
+    //             echo "deployement success"
+    //         }
+    //         failure{
+    //             echo "if deployement failed"
+    //         }
+    //     }
 
-    }
+    // }
 
 
 
