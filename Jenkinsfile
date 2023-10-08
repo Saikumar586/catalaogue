@@ -63,6 +63,16 @@ pipeline{
             }
 
         }
+
+        stage('artifacts')
+        {
+            steps{
+                sh'''
+                ls -ltr
+                zip -r catalogue.zip ./* --exclude=.git --exclude=.zip
+                '''
+            }
+        }
         
         
 //         stage(deploye)
@@ -80,18 +90,18 @@ pipeline{
         
 //         }
 
-//     post{
+    post{
 
-//         always{
-//             success{
-//                 echo "deployement success"
-//             }
-//             failure{
-//                 echo "if deployement failed"
-//             }
-//         }
+        always{
+            success{
+                echo "deployement success"
+            }
+            failure{
+                echo "if deployement failed"
+            }
+        }
 
-//     }
+    }
 
 
 
