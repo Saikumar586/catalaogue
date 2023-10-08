@@ -52,7 +52,7 @@ pipeline{
 
         }
 
-        stage(deploye artifacts)
+        stage('deploye artifacts')
         {
             steps{
 
