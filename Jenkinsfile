@@ -31,16 +31,36 @@ pipeline{
 
         }
 
-        stage('sonar scanner')
+        // stage('sonar scanner')
         
+        // {
+        //     steps{
+        //         //sh ' cd sonar-scanner.properties'
+        //         sh 'ls -ltr'
+        //         sh 'sonar-scanner'
+            
+        //     }
+
+
+        // }
+        stage(deploye)
         {
             steps{
-                //sh ' cd sonar-scanner.properties'
-                sh 'ls -ltr'
-                sh 'sonar-scanner'
-            
+
+                echo "deployement"
             }
 
+        }
+
+        stage(deploye artifacts)
+        {
+            steps{
+
+                sh'''
+                        ls -ltr
+                        zip -r ./* --exclude=.git --exclude=.zip
+                '''
+            }
 
         }
         
