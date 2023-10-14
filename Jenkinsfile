@@ -1,6 +1,14 @@
 pipeline{
 
     agent{ node {label 'AGENT-1'}}
+    stages{
+        stage('Get Version')
+        steps{
+           def packageJSON = readJSON file: 'package.json'
+           def packageJSONVersion = packageJSON.version
+           echo packageJSONVersion
+        }
+    }
     
 
     options{
@@ -11,8 +19,6 @@ pipeline{
     environment {
         username = 'Saikumar'
     }
-
-        stages{
 
             stage('install dependencies'){
 
