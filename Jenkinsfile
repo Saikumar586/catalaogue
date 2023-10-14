@@ -8,9 +8,7 @@ pipeline{
            def packageJSONVersion = packageJSON.version
            echo packageJSONVersion
         }
-    }
     
-
     options{
 
         timeout(time:1, unit:'HOURS')
