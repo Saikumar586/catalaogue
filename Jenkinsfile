@@ -31,15 +31,15 @@ pipeline{
 
         }
 
-        // stage('sonar scanner')
+        stage('sonar scanner')
         
-        // {
-        //     steps{
-        //         //sh ' cd sonar-scanner.properties'
-        //         sh 'ls -ltr'
-        //         sh 'sonar-scanner'
-            
-        //     }
+        {
+            steps{
+                //sh ' cd sonar-scanner.properties'
+                // sh 'ls -ltr'
+                // sh 'sonar-scanner'
+                echo "sonar scan done"
+            }
 
 
         // }
@@ -52,7 +52,7 @@ pipeline{
 
         }
 
-        stage('deploye artifacts')
+        stage('Build')
         {
             steps{
 
@@ -62,6 +62,13 @@ pipeline{
                 '''
             }
 
+        }
+
+        stage("SAST")
+        {
+            steps{
+                echo "static application securituy testing "
+            }
         }
 
         stage('artifacts')
@@ -98,7 +105,7 @@ pipeline{
 //                 error "if failed"
 //                 printenv
 //             }
-        
+
 //         }
 
     // post{
