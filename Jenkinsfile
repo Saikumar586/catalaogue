@@ -1,6 +1,10 @@
 pipeline{
 
     agent{ node {label 'AGENT-1'}}
+
+    environment{
+        packageJSONVersion = ""
+    }
     stages{
         stage('Get Version'){
         steps{
@@ -86,7 +90,7 @@ pipeline{
                 protocol: 'http',
                 nexusUrl: '54.237.83.205:8081/',
                 groupId: 'com.roboshop',
-                version: '1.0.1',
+                version: packageJSONVersion,
                 repository: 'catalogue',
                 credentialsId: 'nexus-auth',
                 artifacts: [
