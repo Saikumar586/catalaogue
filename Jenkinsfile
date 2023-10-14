@@ -40,6 +40,7 @@ pipeline{
                 // sh 'sonar-scanner'
                 echo "sonar scan done"
             }
+        }
 
 
         // }
