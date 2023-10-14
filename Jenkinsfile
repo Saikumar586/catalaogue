@@ -12,22 +12,21 @@ pipeline{
         }
         }
     
-    options{
+    // options{
 
-        timeout(time:1, unit:'HOURS')
+    //     timeout(time:1, unit:'HOURS')
 
-    }
-    environment {
-        username = 'Saikumar'
-    }
+    // }
+    // environment {
+    //     username = 'Saikumar'
+    // }
 
-            stage('install dependencies'){
-
-                steps {
-                    sh 'npm install'
+         stage('install dependencies'){
+            steps {
+                sh 'npm install'
                     
                 }
-            }
+          }
         stage('test')
         
         {
